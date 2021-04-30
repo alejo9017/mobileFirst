@@ -149,12 +149,22 @@ main {
   color: var(--grey-font);
 }
 
+.main-tables-container {
+  display: flex;
+  height: 380px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
 .main-currency-table {
+  position: relative;
+  scroll-snap-align: center;
   width: 70%;
   min-width: 235px;
   max-width: 500px;
   height: 360px;
-  margin: 0 auto;
+  margin: 0 15px;
   font-family: "Inter", sans-serif;
 }
 
@@ -428,13 +438,22 @@ main {
   font-weight: 500;
 }
 
+.plans-container-slider{
+  display: flex;
+  height: 316px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
 .plans-container--card{
   position: relative;
-  width: 70%;
-  min-width: 230px;
+  scroll-snap-align: center;
+  width: 60%;
+  min-width: 190px;
   max-width: 300px;
   height: 250px;
-  margin: 50px auto 0;
+  margin: 50px 10px 0;
   padding: 0 15px;
   background-color: var(--just-white);
   border-radius: 15px;
@@ -474,14 +493,12 @@ main {
   margin-top: 0;
   margin-bottom: 16px;
   color: var(--black);
-  position: relative;
+  
 }
 .plan-card--price span{
   font-size: 1.2rem;
   line-height: 1.45rem;
-  position: absolute;
-  top: 15px;
-  left: calc(50% - 42px);
+  vertical-align:text-top;
 }
 
 .plan-card--saving {
@@ -489,9 +506,88 @@ main {
   line-height: 1.45rem;
   font-weight: 500;
   color: var(--grey-font);
-  margin-bottom: 16px;
   font-family: 'Inter', sans-serif;
   height: auto;
   width: 160px;
   margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.plan-card--ca {
+  display: inline-block;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  color: var(--warm-black);
+  height: 50px;
+  width: 150px;
+  margin: 0 auto;
+  border: 2px solid #F7931A;
+  border-radius: 5px;
+  background-color: var(--off-white);
+  font-family: "DM Sans", sans-serif;
+}
+.plan-card--ca span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('./assets/icons/arrow-orange.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  vertical-align: text-bottom;
+}
+
+
+footer {
+  height: 150px;
+  min-width: 320px;
+  background-color: var(--bitcoin-orange);
+  display: flex;
+}
+
+.footer-meta {
+  height: 80px;
+  width: 50%;
+  margin-top: 40px;
+  padding-left: 65px;
+}
+
+.footer-meta ul {
+  margin: 0;
+  padding: 0;
+}
+.footer-meta li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.footer-meta a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--just-white);
+  font-weight: 500;
+}
+
+.footer-icon {
+  width: 50%;
+  text-align: center;
+}
+
+.footer-icon img{
+  height: 24px;
+  width: 40px;
+  padding-top: 50px;
+  align-self: center;
+
+}
+
+.footer-icon p{
+  font-size: 0.8rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  margin-top: 7px;
+  color: var(--soft-orange);
 }
